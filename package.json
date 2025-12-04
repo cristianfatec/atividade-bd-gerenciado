@@ -1,0 +1,15 @@
+{
+  "name": "atividade-bd-gerenciado",
+  "version": "1.0.0",
+  "description": "Exercício: BD gerenciado com primário (write) e réplica (read)",
+  "main": "app.js",
+  "scripts": {
+    "start:loop": "node app.js",
+    "start:api": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.3"
+  }
+}
