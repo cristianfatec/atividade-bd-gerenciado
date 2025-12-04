@@ -1,5 +1,12 @@
 # Atividade: BD Gerenciado (Primário/Replica)
 
+Grupo:
+Bruno Algarte
+Cristian Nascimento
+Eduardo Vilas Boas
+Rafael Silva
+
+
 Este projeto demonstra:
 - **INSERT** no **host primário** (write)
 - **10 SELECTs individuais** na **réplica** (read) a cada ciclo
