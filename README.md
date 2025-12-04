@@ -1,4 +1,4 @@
-# 🗄️ Banco de Dados Gerenciado — Atividade 01 (FATEC)
+#  Banco de Dados Gerenciado — Atividade 01 (FATEC)
 
 Este repositório contém a implementação da **Atividade 01 – Banco de Dados Gerenciado**, desenvolvida para a disciplina **Computação em Nuvem 2** do curso de **Desenvolvimento de Software Multiplataforma (DSM)** da **FATEC**.
 
@@ -11,7 +11,7 @@ A aplicação insere registros periódicos na tabela `produto` e, após cada ins
 
 ---
 
-## 👥 Integrantes do Grupo
+##  Integrantes do Grupo
 
 - **Bruno Algarte**  
 - **Cristian Nascimento**  
@@ -20,7 +20,7 @@ A aplicação insere registros periódicos na tabela `produto` e, após cada ins
 
 ---
 
-## 🎯 Propósito da Atividade
+##  Propósito da Atividade
 
 - Compreender o funcionamento de **bancos de dados gerenciados**  
 - Aplicar o conceito de **replicação MySQL** separando leitura e escrita  
@@ -29,7 +29,7 @@ A aplicação insere registros periódicos na tabela `produto` e, após cada ins
 
 ---
 
-## 📌 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - MySQL (primário + réplica)  
 - Linguagem definida pelo grupo (Node.js, Python, C#, etc.)  
