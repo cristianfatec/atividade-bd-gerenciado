@@ -1,52 +1,38 @@
-# Atividade: BD Gerenciado (Primário/Replica)
+# 🗄️ Banco de Dados Gerenciado — Atividade 01 (FATEC)
 
-Grupo:
-Bruno Algarte
-Cristian Nascimento
-Eduardo Vilas Boas
-Rafael Silva
+Este repositório contém a implementação da **Atividade 01 – Banco de Dados Gerenciado**, desenvolvida para a disciplina **Computação em Nuvem 2** do curso de **Desenvolvimento de Software Multiplataforma (DSM)** da **FATEC**.
 
+O objetivo da atividade é demonstrar o uso de um ambiente MySQL com **replicação**, utilizando dois hosts distintos:
 
-Este projeto demonstra:
-- **INSERT** no **host primário** (write)
-- **10 SELECTs individuais** na **réplica** (read) a cada ciclo
-- Alternativa via **API (Express)** com rotas `POST /produtos` (write) e `GET /produto/:id` (read)
+- **Host primário (WRITE)** → responsável pelas operações de escrita (INSERT)
+- **Host réplica (READ)** → responsável pelas operações de leitura (SELECT)
 
-## 1) Pré-requisitos
-- Node.js 18+
-- Acesso a um MySQL gerenciado com **dois endpoints**: primário (write) e réplica (read)
-- Credenciais (usuário e senha) fornecidas pelo professor
-
-## 2) Instalação
-```bash
-npm install
-```
-
-## 3) Configuração
-Copie `.env.example` para `.env` e preencha com as credenciais/hosts reais.
-
-## 4) Criação do schema
-Rode o conteúdo de `sql/schema.sql` **no host primário** (write).
-
-## 5) Loop (INSERT + SELECTs)
-```bash
-npm run start:loop
-```
-- Faz 1 INSERT no primário por ciclo
-- Em seguida faz 10 SELECTs (id-1..id-10) na réplica
-
-## 6) API (opcional)
-```bash
-npm run start:api
-```
-- `POST /produtos` body JSON: `{ "descricao": "Geladeira X", "categoria": "eletro", "valor": 1999.90 }`
-- `GET /produto/30` lê o produto de id 30 **na réplica**
-
-## Dicas
-- Em provedores cloud, a replicação pode levar alguns ms/s. Por isso existe um `await sleep(200)` antes dos SELECTs.
-- Se o provedor exigir SSL, ative `DB_SSL=true` no `.env` e, se necessário, aponte `DB_SSL_CA` para o certificado.
-- Se receber erro de autenticação, confirme usuário/senha/host e se o **firewall** da instância permite o seu IP.
+A aplicação insere registros periódicos na tabela `produto` e, após cada inserção, realiza múltiplos SELECTs direcionados à réplica, simulando o funcionamento de um sistema distribuído com **consistência eventual**.
 
 ---
 
-© 2025-11-06
+## 👥 Integrantes do Grupo
+
+- **Bruno Algarte**  
+- **Cristian Nascimento**  
+- **Eduardo Vilas Boas**  
+- **Rafael Silva**
+
+---
+
+## 🎯 Propósito da Atividade
+
+- Compreender o funcionamento de **bancos de dados gerenciados**  
+- Aplicar o conceito de **replicação MySQL** separando leitura e escrita  
+- Observar o comportamento de **consistência eventual** entre primário e réplica  
+- Desenvolver uma aplicação que executa inserções e leituras distribuídas  
+
+---
+
+## 📌 Tecnologias Utilizadas
+
+- MySQL (primário + réplica)  
+- Linguagem definida pelo grupo (Node.js, Python, C#, etc.)  
+- Git e GitHub para versionamento  
+
+---
